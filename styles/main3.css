@@ -1,0 +1,422 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#block-page {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#logo-presentation {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#logo-presentation .fleche {
+  color: black;
+  font-size: 1.5rem;
+  padding-left: 35px;
+}
+
+#logo-presentation #titre-principal {
+  width: 170px;
+  height: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Partie image du restaurant */
+#presentation-restaurant {
+  height: 333px;
+  position: relative;
+}
+
+#presentation-restaurant #page-image {
+  position: absolute;
+}
+
+#presentation-restaurant #page-image #restaurant-img {
+  width: 100%;
+  height: 332px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  color: grey;
+  margin-bottom: -5px;
+}
+
+#presentation-restaurant #titre-restaurant {
+  border-radius: 25px 25px 0 0;
+  background-color: #efefef;
+  padding-top: 20px;
+  width: 100%;
+  bottom: 145px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+}
+
+#presentation-restaurant #titre-restaurant h1 {
+  font-size: 1.6rem;
+  font-family: "shrikhand",sans-serif;
+  padding-left: 20px;
+  padding-left: 20px;
+}
+
+/* Partie Icone heart */
+.btn-heart {
+  position: absolute;
+  right: 6%;
+  bottom: 20%;
+  cursor: pointer;
+}
+
+.btn-heart #heart-empty {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition-property: opacity, z-index;
+  transition-property: opacity, z-index;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.btn-heart #heart-empty #heart-empty1 {
+  font-size: 30px;
+  background-color: #ececec;
+}
+
+.btn-heart #heart-empty:hover {
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn-heart #heart-full {
+  font-size: 30px;
+}
+
+.btn-heart #heart-full path {
+  fill: url(#grad1);
+}
+
+/* Partie-restaurant */
+#restaurant-menu {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  background-color: #efefef;
+  padding-top: 3px;
+  padding-bottom: 35px;
+}
+
+#restaurant-menu #title-menu {
+  font-size: 1rem;
+  margin: 0px 0 20px 70px;
+}
+
+.underline {
+  border-bottom: 3px solid #99e2d0;
+  width: 40px;
+  margin: -5px 0 18px 70px;
+}
+
+#part-entree, #part-plat, #part-dessert {
+  padding-bottom: 45px;
+}
+
+.menu {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu .part-menu {
+  width: 312px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+  background-color: #fff;
+  height: 75px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .part-menu .part-title {
+  width: 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -7px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu .part-menu .part-title h3 {
+  width: 275px;
+  font-size: 1.17rem;
+  padding: 20px 15px 0 20px;
+  margin-top: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu .part-menu .part-title .p-menu {
+  font-size: .9rem;
+  padding-left: 21px;
+  margin-top: -10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu .part-menu .part-icone {
+  height: 80px;
+  position: absolute;
+  right: -80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
+}
+
+.menu .part-menu .part-icone:hover {
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
+}
+
+.menu .part-menu .part-icone:hover .svg-inline--fa {
+  -webkit-animation: check 1s ease-in;
+          animation: check 1s ease-in;
+}
+
+.menu .part-menu .part-icone .prix {
+  width: 50px;
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.menu .part-menu .part-icone .icone {
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #99e2d0;
+}
+
+.menu .part-menu .part-icone .icone .svg-inline--fa {
+  font-size: 1.6rem;
+  color: white;
+  background-color: #99e2d0;
+}
+
+@-webkit-keyframes check {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes check {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* Partie Button */
+#commande {
+  height: 180px;
+  background-color: #efefef;
+}
+
+#commande #part-button {
+  width: 220px;
+  height: 50px;
+  font-size: 1.1em;
+  text-align: center;
+  color: white;
+  display: block;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-shadow: 2px 3px 0px #e0dcdc;
+          box-shadow: 2px 3px 0px #e0dcdc;
+  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
+  -webkit-transition: -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
+  transition: -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
+  transition: box-shadow 150ms linear, transform 150ms linear;
+  transition: box-shadow 150ms linear, transform 150ms linear, -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
+  border-radius: 30px;
+  padding-top: 2px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#commande #part-button:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#commande #part-button #btn.commande {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+}
+
+/*Partie footer*/
+#block-footer {
+  font-size: 12px;
+  background-color: #353535;
+  font-family: "Roboto";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 0 0 25px;
+}
+
+#block-footer #footer-titre {
+  margin-left: 10px;
+}
+
+#block-footer .footer-icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#block-footer p {
+  color: white;
+  font-size: 1.25em;
+  margin: 7px;
+  font-family: "Roboto", sans-serif;
+}
+
+#block-footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 7px 0 23px 6px;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-icone .svg-inline--fa {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#footer-logo {
+  width: 110px;
+  height: 15px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    margin: 0px;
+  }
+  #restaurant-menu {
+    display: block;
+  }
+  #restaurant-menu .menu .part-menu {
+    width: 97%;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    margin: 0px;
+  }
+  #restaurant-menu {
+    display: block;
+  }
+  #restaurant-menu #title-menu {
+    margin: 0px 0px 20px 25px;
+  }
+  #restaurant-menu .underline {
+    margin: -5px 0 18px 25px;
+  }
+  #restaurant-menu .menu {
+    width: 90%;
+    padding-left: 21px;
+  }
+  #restaurant-menu .menu .part-menu {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+/*# sourceMappingURL=main3.css.map */

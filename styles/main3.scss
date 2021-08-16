@@ -1,0 +1,396 @@
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+#block-page
+{
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:100%
+    }
+}
+
+#logo-presentation
+{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    .fleche
+    {
+        color: black;
+        font-size: 1.5rem;
+        padding-left: 35px;
+    }
+    #titre-principal
+    {
+        width: 170px;
+        height: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Partie image du restaurant */
+
+#presentation-restaurant
+{
+    height: 333px;
+    position: relative;
+    #page-image
+    {
+        position: absolute;
+        #restaurant-img
+        {
+                width: 100%;
+                height: 332px;
+                object-fit: cover;
+                color: grey;
+                margin-bottom: -5px;
+        }
+    }
+
+    #titre-restaurant
+    {
+        border-radius: 25px 25px 0 0;
+        background-color: #efefef;
+        padding-top: 20px;
+        width: 100%;
+        bottom: 145px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0px;
+        h1 
+        {
+            font-size: 1.6rem;
+            font-family: "shrikhand",sans-serif;
+            padding-left: 20px;
+            padding-left: 20px;
+        }
+    }
+}
+
+/* Partie Icone heart */
+
+.btn-heart
+{
+    position: absolute;
+    right: 6%;
+    bottom: 20%;
+    cursor: pointer;
+
+    #heart-empty
+    {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        opacity: 1;
+        z-index: 1;
+        transition-property:opacity, z-index;
+        transition-duration: 1s;
+        #heart-empty1
+        {
+            font-size: 30px; 
+            background-color: #ececec;
+        }
+        &:hover
+        {
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+ 
+        
+    #heart-full
+    {
+        font-size: 30px;
+        
+        path{
+        fill: url(#grad1);
+        }
+    } 
+}
+
+/* Partie-restaurant */
+
+#restaurant-menu
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #efefef;
+    padding-top: 3px;
+    padding-bottom: 35px;
+    #title-menu
+    {
+        font-size: 1rem;
+        margin: 0px 0 20px 70px;
+    }
+}
+
+.underline
+{
+    border-bottom: 3px solid #99e2d0;
+    width: 40px;
+    margin: -5px 0 18px 70px;
+}
+
+
+#part-entree, #part-plat, #part-dessert
+{
+    padding-bottom: 45px;
+}
+.menu
+{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    .part-menu
+    {
+        width: 312px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 0;
+        background-color: #fff;
+        height: 75px;
+        margin-bottom: 25px;
+        margin-left: 20px;
+        display: flex;
+       
+        .part-title
+        {
+            width: 86%;
+            display: flex;
+            flex-direction: column;
+            margin-top: -7px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            h3 
+            {
+                width: 275px;
+                font-size: 1.17rem;
+                padding: 20px 15px 0 20px;
+                margin-top: 0px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .p-menu
+            {
+                font-size: .9rem;
+                padding-left: 21px;
+                margin-top: -10px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+        }
+
+        .part-icone
+        {
+            height: 80px;
+            position: absolute;
+            right: -80px;
+            display: flex;
+            transform: translateX(0px);
+            transition: all 1.2s ease-in-out;
+            &:hover
+            {
+                transform: translateX(-80px);
+                .svg-inline--fa
+                {
+                   animation: check 1s ease-in;
+                }
+            }
+           
+            .prix
+            {
+                width: 50px;
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                font-size: .9rem;
+            }
+
+            .icone 
+            {
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #99e2d0;
+
+                .svg-inline--fa
+                {
+                    font-size: 1.6rem;
+                    color: white;
+                    background-color: #99e2d0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes check{
+    0% {
+        transform: rotate(0);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Partie Button */
+
+#commande
+{
+    height: 180px;
+    background-color: #efefef;
+    #part-button
+    {
+        width: 220px;
+        height: 50px;
+        font-size: 1.1em;
+        text-align: center;
+        color: white;
+        display: block;
+        cursor: pointer;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 2px 3px 0px #e0dcdc;
+        background: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
+        transition: box-shadow 150ms linear, transform 150ms linear;
+        border-radius: 30px;
+        padding-top: 2px;
+        transform: scale(1);
+        &:hover
+        {
+            transform: scale(.95);
+        }
+            
+        #btn.commande
+        {
+            font-family: "Roboto", sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            border: none;
+        }
+    }
+}
+
+
+/*Partie footer*/
+
+#block-footer
+{
+    font-size: 12px;
+    background-color: #353535;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 25px;
+    #footer-titre
+    {
+        margin-left: 10px;
+    }
+    .footer-icone
+    {
+        display: flex;
+    }
+    p
+    {
+        color: white;
+        font-size: 1.25em;
+        margin: 7px;
+        font-family: "Roboto", sans-serif;
+    }
+    a 
+    {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 7px 0 23px 6px;
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+.footer-icone .svg-inline--fa
+{
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#footer-logo
+{
+    width: 110px;
+    height: 15px;
+    filter: invert(100%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
+
+{
+    body
+    {
+        margin: 0px;
+    }
+
+    #restaurant-menu
+    {
+        display: block;
+        .menu .part-menu
+        {
+            width: 97%;
+            margin-left: 40px;
+        }
+    }
+}
+
+
+@media screen and (min-width:320px) and (max-width: 767px)
+
+{
+    body 
+    {
+        margin: 0px;
+    }
+
+    #restaurant-menu
+    {
+        display: block;
+        #title-menu
+        {
+            margin: 0px 0px 20px 25px;
+        }
+        .underline
+        {
+            margin: -5px 0 18px 25px;
+        }
+        .menu
+        {
+            width: 90%;
+            padding-left: 21px;
+            .part-menu
+            {
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+    }
+}
