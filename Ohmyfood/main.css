@@ -34,14 +34,21 @@ html, body {
   height: 100%;
   background-color: white;
   position: fixed;
-  z-index: 10;
+  z-index: 999;
   opacity: 85%;
-  -webkit-animation-name: loader;
-          animation-name: loader;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: loader 4s;
+          animation: loader 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #loader #icone-loader {
@@ -59,8 +66,8 @@ html, body {
   left: 0;
   top: 0;
   bottom: 0;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
+  -webkit-animation: spin 2s linear;
+          animation: spin 2s linear;
 }
 
 #loader #icone-loader .svg-inline--fa {
@@ -74,20 +81,16 @@ html, body {
 }
 
 @-webkit-keyframes loader {
-  0% {
-    opacity: 85%;
-  }
   100% {
     opacity: 0%;
+    visibility: hidden;
   }
 }
 
 @keyframes loader {
-  0% {
-    opacity: 85%;
-  }
   100% {
     opacity: 0%;
+    visibility: hidden;
   }
 }
 
