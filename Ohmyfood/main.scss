@@ -1,53 +1,6 @@
 
-@mixin card-imageM
-{
-    width: 100%;
-    height: 177px;
-    border-radius: 20px 20px 0px 0px;
-}
+@import "../SASS/mixins.scss";
 
-@mixin buttonM
-{
-    width: 80px;
-    height: 30px;
-    border: 1px solid #99E2D0;
-    background-color: #99E2D0;
-    position: absolute;
-    top: 15px;
-    right: 12px;
-}
-
-@mixin button-pM
-{
-    color: #1b6150;
-    position: absolute;
-    text-decoration: none;
-    margin: 6px;
-}
-
-@mixin restaurant-cardM
-{
-    width: 90%;
-    height: 251px;
-    box-shadow: 1px 1px 5px grey;
-    border: 0px solid grey;
-    border-radius: 20px;
-    position: relative;
-}
-
-@mixin restaurant-titre
-{
-    margin-top: 10px;
-    margin-bottom: -10px;
-    font-size: 1.2em;
-    color: #0e0b0b; 
-}
-
-@mixin restaurant-textM 
-{
-    text-decoration: none;
-    color: black;
-}  
 
 
 html, body
