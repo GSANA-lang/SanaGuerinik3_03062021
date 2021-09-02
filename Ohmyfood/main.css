@@ -7,26 +7,7 @@ html, body {
 #block-page {
   font-family: "Roboto", sans-serif;
   width: 100%;
-  -webkit-animation: faiden 2s;
-          animation: faiden 2s;
-}
-
-@-webkit-keyframes faiden {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes faiden {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  z-index: 1;
 }
 
 #loader {
@@ -34,8 +15,8 @@ html, body {
   height: 100%;
   background-color: white;
   position: fixed;
-  z-index: 999;
-  opacity: 85%;
+  z-index: 1000;
+  opacity: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,10 +26,13 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: loader 4s;
-          animation: loader 4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  /* visibility: hidden; */
+  -webkit-animation: loading .01s;
+          animation: loading .01s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 #loader #icone-loader {
@@ -66,8 +50,8 @@ html, body {
   left: 0;
   top: 0;
   bottom: 0;
-  -webkit-animation: spin 2s linear;
-          animation: spin 2s linear;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
 }
 
 #loader #icone-loader .svg-inline--fa {
@@ -80,17 +64,29 @@ html, body {
   bottom: 0;
 }
 
-@-webkit-keyframes loader {
+@-webkit-keyframes visibility {
   100% {
-    opacity: 0%;
-    visibility: hidden;
+    visibility: collapse;
   }
 }
 
-@keyframes loader {
+@keyframes visibility {
   100% {
-    opacity: 0%;
-    visibility: hidden;
+    visibility: collapse;
+  }
+}
+
+@-webkit-keyframes loading {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes loading {
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 
@@ -176,8 +172,8 @@ html, body {
 }
 
 #reservation #button-explorer {
-  width: 220px;
-  height: 50px;
+  width: 230px;
+  height: 55px;
   font-size: 1.1em;
   text-align: center;
   color: white;
@@ -185,8 +181,8 @@ html, body {
   cursor: pointer;
   margin-right: auto;
   margin-left: auto;
-  -webkit-box-shadow: 2px 3px 0px;
-          box-shadow: 2px 3px 0px;
+  -webkit-box-shadow: 0px 0px 12px 0px #716c6c;
+          box-shadow: 0px 0px 12px 0px #716c6c;
   background: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
   -webkit-transition: -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
   transition: -webkit-box-shadow 150ms linear, -webkit-transform 150ms linear;
@@ -199,8 +195,8 @@ html, body {
 }
 
 #reservation #button-explorer:hover {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #reservation #button-explorer #button-text {
@@ -248,7 +244,11 @@ html, body {
 }
 
 #partie-fonctionnement #fonctionnement-listes .fonctionnement-liste:hover {
-  background-color: #bea8da;
+  background-color: #e3d8f0;
+}
+
+#partie-fonctionnement #fonctionnement-listes .fonctionnement-liste:hover .fonctionnement-logo {
+  color: #9356DC;
 }
 
 #partie-fonctionnement #fonctionnement-listes .fonctionnement-liste .fonctionnement-numero {
