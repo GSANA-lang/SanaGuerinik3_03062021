@@ -1,7 +1,7 @@
 
 @import "../SASS/mixins.scss";
 
-
+$colour: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
 
 html, body
 {
@@ -151,7 +151,7 @@ html, body
         margin-right: auto;
         margin-left: auto;
         box-shadow: 0px 0px 12px 0px #716c6c;
-        background: linear-gradient(175deg, #FF79DA 10%, #9356DC 95%);
+        background: $colour;
         transition: box-shadow 150ms linear, transform 150ms linear;
         border-radius: 30px;
         padding-top: 2px;
@@ -159,6 +159,9 @@ html, body
         &:hover
         {
             transform: scale(1.10);
+            background: lighten($colour,10%);
+            /* opacity: 0.8; */
+            box-shadow: 0px 0px 12px 0px #716c6c ;
         }
         
         #button-text
@@ -338,7 +341,7 @@ html, body
     right: 7%;
     bottom: 7%;
 
-    #heart-empty
+    .heart-empty
     {
         width: 30px;
         height: 30px;
@@ -347,7 +350,7 @@ html, body
         z-index: 1;
         transition-property:opacity, z-index;
         transition-duration: 1s;
-        #heart-empty1
+        #heart-empty1, #heart-empty2, #heart-empty3, #heart-empty4
         {
             font-size: 30px; 
             background-color: #ececec;
@@ -360,14 +363,14 @@ html, body
     }
  
         
-    #heart-full
+    #heart-full3, #heart-full1, #heart-full2, #heart-full4
     {
         font-size: 30px;
         
         path{
-        fill: url(#grad1);
+            fill: url(#grad1);
         }
-    } 
+    }
 }
 
 #block-footer

@@ -7,17 +7,8 @@ body
 {
     font-family: "Roboto", sans-serif;
     width: 100%;
-   /*  animation: fadein 4s; */
 }
 
-/* @keyframes fadein {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity:100%
-    }
-} */
 
 #logo-presentation
 {
@@ -134,7 +125,7 @@ body
     {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    #title-menu
+    .title-menu
     {
         font-size: 1rem;
         margin: 0px 0 20px 10px;
@@ -213,8 +204,8 @@ body
             
             h3 
             {
-                font-size: 1.17rem;
-                padding: 20px 15px 0 0px;
+                font-size: 1.05rem;
+                padding: 20px 0px 0 0px;
                 margin-top: 0px;
                 overflow: hidden;
                 white-space: nowrap;
@@ -222,7 +213,7 @@ body
             }
             .p-menu
             {
-                font-size: .9rem;
+                font-size: .83rem;
                 margin-top: -10px;
                 overflow: hidden;
                 white-space: nowrap;
@@ -234,7 +225,7 @@ body
         {
             width: 30px;
             margin-right: 20px;
-            padding-top: 41px;
+            padding-top: 38px;
             display: flex;
             justify-content: flex-end;
             font-weight: bold;
@@ -462,6 +453,7 @@ body
                 .part-confirmation
                 {
                     width: 80px;
+                    right: -13%;
                     .icone
                     {
                         width: 121px;
@@ -495,7 +487,7 @@ body
     {
         display: flex;
         flex-direction: column;
-        #title-menu
+        .title-menu
         {
             margin: 0px 0px 20px 25px;
         }
@@ -505,23 +497,27 @@ body
         }
         .menu 
         {
-            width: 100%;
-            margin-left: 22px;
+            width: 95%;
+            margin-left: 10px;
             .part-menu
             {
                 width: 97%;
-                margin-left: 40px;
+                margin-left: 12px;
+                .part-title
+                {
+                    width: 77%;
+                }
                 .prix
                 {
-                    margin-right: 40px;
+                    margin-right: 12px;
                 }
                 .part-confirmation
                 {
-                    width: 80px;
-                    right: -60px;
+                    width: 37%;
+                    right: -43%;
                     .icone
                     {
-                        width: 80px;
+                        width: 55%;
                         .svg-inline--fa
                         {
                             width: 80px;
@@ -534,6 +530,7 @@ body
     }
     #part-entree, #part-plat, #part-dessert
     {
-        width: 100%;
+        max-width: 100%;
+        padding-left: 0px;
     }
 }

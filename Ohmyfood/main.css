@@ -197,6 +197,10 @@ html, body {
 #reservation #button-explorer:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  background: lighten linear-gradient(175deg, #FF79DA 10%, #9356DC 95%), 60%;
+  /* opacity: 0.8; */
+  -webkit-box-shadow: 0px 0px 12px 0px #716c6c;
+          box-shadow: 0px 0px 12px 0px #716c6c;
 }
 
 #reservation #button-explorer #button-text {
@@ -424,7 +428,7 @@ html, body {
   bottom: 7%;
 }
 
-.btn-heart #heart-empty {
+.btn-heart .heart-empty {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -436,21 +440,21 @@ html, body {
           transition-duration: 1s;
 }
 
-.btn-heart #heart-empty #heart-empty1 {
+.btn-heart .heart-empty #heart-empty1, .btn-heart .heart-empty #heart-empty2, .btn-heart .heart-empty #heart-empty3, .btn-heart .heart-empty #heart-empty4 {
   font-size: 30px;
   background-color: #ececec;
 }
 
-.btn-heart #heart-empty:hover {
+.btn-heart .heart-empty:hover {
   z-index: -1;
   opacity: 0;
 }
 
-.btn-heart #heart-full {
+.btn-heart .heart-full {
   font-size: 30px;
 }
 
-.btn-heart #heart-full path {
+.btn-heart .heart-full path {
   fill: url(#grad1);
 }
 
