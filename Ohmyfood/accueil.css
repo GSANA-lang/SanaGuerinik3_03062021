@@ -197,10 +197,7 @@ html, body {
 #reservation #button-explorer:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background: lighten linear-gradient(175deg, #FF79DA 10%, #9356DC 95%), 60%;
-  /* opacity: 0.8; */
-  -webkit-box-shadow: 0px 0px 12px 0px #716c6c;
-          box-shadow: 0px 0px 12px 0px #716c6c;
+  background: linear-gradient(175deg, rgba(255, 121, 218, 0.7) 10%, rgba(147, 86, 220, 0.7) 95%);
 }
 
 #reservation #button-explorer #button-text {
@@ -310,11 +307,18 @@ html, body {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #restaurant-card1 .restaurant-a {
   text-decoration: none;
   color: #0e0b0b;
+}
+
+#restaurant-card1:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #restaurant-card2 {
@@ -331,11 +335,18 @@ html, body {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #restaurant-card2 .restaurant-a {
   text-decoration: none;
   color: #0e0b0b;
+}
+
+#restaurant-card2:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #restaurant-card3 {
@@ -351,11 +362,18 @@ html, body {
   grid-column: 2/3;
   -ms-grid-row: 2;
   grid-row: 2/2;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #restaurant-card3 .restaurant-a {
   text-decoration: none;
   color: #0e0b0b;
+}
+
+#restaurant-card3:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #restaurant-card4 {
@@ -371,11 +389,18 @@ html, body {
   grid-column: 3/4;
   -ms-grid-row: 2;
   grid-row: 2/2;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #restaurant-card4 .restaurant-a {
   text-decoration: none;
   color: #0e0b0b;
+}
+
+#restaurant-card4:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .restaurant_image .card-image {
@@ -450,11 +475,11 @@ html, body {
   opacity: 0;
 }
 
-.btn-heart .heart-full {
+.btn-heart #heart-full1 {
   font-size: 30px;
 }
 
-.btn-heart .heart-full path {
+.btn-heart #heart-full1 path {
   fill: url(#grad1);
 }
 
@@ -565,4 +590,4 @@ html, body {
     padding-bottom: 80px;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=accueil.css.map */

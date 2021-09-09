@@ -416,6 +416,7 @@ body {
 #commande #part-button:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  background: linear-gradient(175deg, rgba(255, 121, 218, 0.7) 10%, rgba(147, 86, 220, 0.7) 95%);
 }
 
 #commande #part-button #p-button {

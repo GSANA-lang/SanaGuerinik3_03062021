@@ -4,7 +4,7 @@
     "description": "Projet 3 : Dynamisez une page web avec des animations CSS",
     "main": "index.js",
     "scripts": {
-      "sass": "sass --watch main.scss:style1.css"
+      "sass": "sass --watch accueil.scss:accueil.css"
     },
     "author": "",
     "license": "ISC"
