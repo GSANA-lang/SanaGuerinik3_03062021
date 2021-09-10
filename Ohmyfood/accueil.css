@@ -483,6 +483,30 @@ html, body {
   fill: url(#grad1);
 }
 
+.btn-heart #heart-full2 {
+  font-size: 30px;
+}
+
+.btn-heart #heart-full2 path {
+  fill: url(#grad2);
+}
+
+.btn-heart #heart-full3 {
+  font-size: 30px;
+}
+
+.btn-heart #heart-full3 path {
+  fill: url(#grad3);
+}
+
+.btn-heart #heart-full4 {
+  font-size: 30px;
+}
+
+.btn-heart #heart-full4 path {
+  fill: url(#grad4);
+}
+
 #block-footer {
   font-size: 12px;
   background-color: #353535;
