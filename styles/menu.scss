@@ -120,7 +120,7 @@ body
     display: grid;
     background-color: #efefef;
     padding-top: 3px;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
     @media (min-width:64rem)
     {
         grid-template-columns: 1fr 1fr 1fr;
@@ -143,7 +143,6 @@ body
 #part-entree, #part-plat, #part-dessert
 {
     max-width: 83%;
-    padding-bottom: 45px;
     padding-left: 10px;
 }
 
@@ -157,51 +156,50 @@ body
     overflow :hidden;
     cursor: pointer;
     background-color: #fff;
-    transition: width .6s ease-in-out;
+    transition: width .8s ease-in-out;
     &:hover
-        {
-            .part-menu
+    {
+        .part-menu
+        {    
+            .part-title
             {
-                max-width: 82%;
-                .prix
-                {
-                    transform: translateX(-24px); 
-                }
-                .part-confirmation
-                { 
-                    transform: translateX(-24px);
-                    .svg-inline--fa
-                    {
-                    animation: check .6s ease-in;
-                    }
-                } 
+                width: calc(90% - 30%);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
-        }  
 
-
+            .part-confirmation
+            { 
+                width: 20%;
+                    
+                .svg-inline--fa
+                {
+                    animation: check .7s ease-in;
+                }
+            } 
+        }
+            
+    }  
     .part-menu
     {
-        width: 95%;
+        width: 100%;
         position: relative;
         background-color: #fff;
         height: 75px;
         margin-bottom: 25px;
-        margin-left: 20px;
         display: flex;
-        justify-content: space-between;
-        
-        
-        
         .part-title
         {
-            width: 74%;
+            width: 90%;
+            padding-left: 20px;
             display: flex;
             flex-direction: column;
             margin-top: -7px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-            
+            transition: width .8s ease-in-out;
             h3 
             {
                 font-size: 1.05rem;
@@ -217,39 +215,38 @@ body
                 margin-top: -10px;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis;
+                text-overflow: ellipsis; 
             }
-
         }
+
         .prix
         {
-            width: 30px;
-            margin-right: 20px;
+            width: 10%;
             padding-top: 38px;
             display: flex;
-            justify-content: flex-end;
+            margin-right: 10px;
+            margin-left: 10px;
             font-weight: bold;
             font-size: .9rem;
-            transition: transform .6s ease-in-out;
-        }
-
+        }    
+        
+    
         .part-confirmation
         {
-            width: 80px;
+            width: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
             height: 80px;
             position: absolute;
-            right: -80px;
             display: flex;
-            transition: transform .6s ease-in-out;
+            background-color: #99e2d0;
+            transition: width .9s ease-in-out;
            
             .icone 
             {
-                width: 80px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #99e2d0;
-
+                right: 0;
+                margin: auto;
                 .svg-inline--fa
                 {
                     font-size: 1.6rem;
@@ -260,8 +257,6 @@ body
         }
     }
 }
-
-
 
 @keyframes check{
     0% {
@@ -329,10 +324,13 @@ body
 @keyframes apparition
 {
     0%{
-        transform: scale(0)
+        transform: translate3d(0,0,0);
+        opacity: 0;
+
     }
     100%{
-        transform: scale(1);
+        transform: translate3d(0,-10px,0);
+        opacity: 1;
     }
 }
 
@@ -341,12 +339,12 @@ body
 
 #commande
 {
-    height: 180px;
+    height: 145px;
     background-color: #efefef;
     #part-button
     {
         width: 220px;
-        height: 55px;
+        height: 53px;
         font-size: 1.1em;
         text-align: center;
         color: white;
@@ -443,28 +441,21 @@ body
         {
             width: 90%;
             margin-left: 22px;
-            .part-menu
+            &:hover
             {
-                width: 97%;
-                margin-left: 40px;
-                .prix
-                {
-                    margin-right: 40px;
-                }
                 .part-confirmation
                 {
-                    width: 80px;
-                    right: -13%;
-                    .icone
-                    {
-                        width: 121px;
-                        .svg-inline--fa
-                        {
-                            width: 121px;
-                        }
-                    }
+                    width: 15%;
                 }
-                
+            }
+            .part-menu
+            {
+                width: 95%;
+                margin-left: 37px;
+                .part-transform
+                {
+                    width: 90%;
+                }
             }
         }
     }
@@ -498,34 +489,22 @@ body
         }
         .menu 
         {
-            width: 95%;
-            margin-left: 10px;
-            .part-menu
+            width: 90%;
+            margin-left: 19px;
+            &:hover
             {
-                width: 97%;
-                margin-left: 12px;
-                .part-title
-                {
-                    width: 77%;
-                }
-                .prix
-                {
-                    margin-right: 12px;
-                }
                 .part-confirmation
                 {
-                    width: 37%;
-                    right: -43%;
-                    .icone
-                    {
-                        width: 55%;
-                        .svg-inline--fa
-                        {
-                            width: 80px;
-                        }
-                    }
+                    width: 15%;
                 }
-                
+            }
+            .part-menu
+            {
+                width: 100%;
+                .part-transform
+                {
+                    width: 93%;
+                }
             }
         }
     }
